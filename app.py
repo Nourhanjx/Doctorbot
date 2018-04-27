@@ -185,7 +185,7 @@ def api_ai_filled(message):
     request.query = message
     response = request.getresponse()
     data = json.loads(response.read())
-    print (data)
+    print data
     # response = str(data["result"]["fulfillment"]["speech"])
     symptom = str(data["result"]["parameters"]["symptoms"])
     age = str(data["result"]["parameters"]["age"]["unit"])
